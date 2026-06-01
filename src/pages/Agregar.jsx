@@ -28,12 +28,12 @@ const Agregar = () => {
   }
 
   return (
-    <div className="w-full h-full contenedor flex flex-col items-center justify-start pt-5">
+    <div className="w-full contenedor overflow-y-hidden flex flex-col items-center justify-start pt-5">
       <TitleAgregar titulo="Agregar videojuego"/>
-      <div className="flex flex-col gap-4 w-96 mx-auto">
+      <div className="flex flex-col gap-4 w-96 ">
       <h2 className="text-xl text-center font-bold">Agregar Videojuego</h2>
-      <div className="modal-actualizar h-75 overflow-x-hidden">
-            <div className="bg-white rounded-lg p-6 w-96 flex flex-col gap-4 p-4">
+      <div className="modal-agregar h-75 ">
+            <div className="bg-white rounded-lg  w-96 flex flex-col gap-4 p-4">
 
             <input name="nombre" placeholder="Nombre" onChange={handleChange} className="border rounded px-3 py-2" />
       <input name="resena" placeholder="Reseña" onChange={handleChange} className="border rounded px-3 py-2" />

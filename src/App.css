@@ -5,11 +5,10 @@
     box-sizing: border-box;
 }
 .contenedor{
-    background-color: #135BD9;
+    background: linear-gradient(to bottom, #0f42ce 0%, #167eda 100%);
     height: 100vh;
 }
 .table-container{
-    background-color: #135BD9;
     margin:auto;
     height:85%;
     width: 75%;
@@ -95,6 +94,12 @@ thead th{
     overflow-y: auto;
 }
 .modal-actualizar::-webkit-scrollbar{
+    width: 0px;
+}
+.modal-agregar{
+    overflow-y: auto;
+}
+.modal-agregar::-webkit-scrollbar{
     width: 0px;
 }
 .button-agregar{

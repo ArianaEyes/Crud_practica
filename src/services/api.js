@@ -5,12 +5,15 @@ export const obtenerDatos = async () => {
 } 
 
 export const agregarDatos = async (datos) => {
-    const respuesta  = await fetch("https://wyper.alwaysdata.net/videojuegos.php",{
-        method:"POST",
-        headers:{"Content-Type": "application/json"},
+     console.log("datos a enviar:", datos)
+    const respuesta = await fetch("https://wyper.alwaysdata.net/videojuegos.php", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(datos)
     })
-    return await respuesta.json()
+    const texto = await respuesta.text()
+    console.log(texto)
+    return texto
 }
 
 export const eliminarDatos = async (id) => {
@@ -21,7 +24,7 @@ export const eliminarDatos = async (id) => {
 }
 
 export const editarDatos = async (id,datos) =>{
-    const respuesta = await fetch(`https://wyper.alwaysdata.net/videojuegos.php/?id=${id}`,{
+    const respuesta = await fetch(`https://wyper.alwaysdata.net/videojuegos.php?id=${id}`,{
         method:"PUT",
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify(datos)

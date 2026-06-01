@@ -1,14 +1,14 @@
 const API_URL = import.meta.env.VITE_API_URL
 
 export const obtenerDatos = async () => {
-    const respuesta = await  fetch(`${API_URL}/videojuegos.php`)
+    const respuesta = await  fetch("https://wyper.alwaysdata.net/videojuegos.php")
     const datosObtenidos = await respuesta.json()
     return datosObtenidos
 } 
 
 export const agregarDatos = async (datos) => {
      console.log("datos a enviar:", datos)
-    const respuesta = await fetch(`${API_URL}/videojuegos.php`, {
+    const respuesta = await fetch("https://wyper.alwaysdata.net/videojuegos.php", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(datos)
@@ -19,7 +19,7 @@ export const agregarDatos = async (datos) => {
 }
 
 export const eliminarDatos = async (id) => {
-    const respuesta = await fetch(`${API_URL}/videojuegos.php/?id=${id}`,{
+    const respuesta = await fetch(`https://wyper.alwaysdata.net/videojuegos.php/?id=${id}`,{
         method:"DELETE"
     })
     return await respuesta.json()   
